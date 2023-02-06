@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import ClickOutComponent from "react-onclickout";
 import classNames from "classnames";
 import { Btc, Etharium, Usd } from "../../images";
 import { BsChevronDown } from "react-icons/bs";
@@ -39,7 +38,7 @@ const Select = ({onChange, value = "BTC", icon, name}) => {
 
   return (
     <div className=" relative">
-      <ClickOutComponent onClickOut={() => isOpen && setIsOpen(false)}>
+      <div onClickOut={() => isOpen && setIsOpen(false)}>
         <div
           className=" border border-purple-50 cursor-pointer rounded-2xl py-3 md:py-4 px-4 md:px-6 flex items-center"
           onClick={() => setIsOpen(!isOpen)}
@@ -82,7 +81,7 @@ const Select = ({onChange, value = "BTC", icon, name}) => {
             })}
           </div>
         </div>
-      </ClickOutComponent>
+      </div>
     </div>
   );
 };
