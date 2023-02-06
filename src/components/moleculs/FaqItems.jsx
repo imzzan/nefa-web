@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import { BsChevronUp } from "react-icons/bs";
-import { Fade } from "react-reveal";
 
 const FaqItems = ({ open, title, children }) => {
   const [isOpen, setIsOpen] = useState(open ? true : false);
