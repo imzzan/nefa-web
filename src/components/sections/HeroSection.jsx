@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React from 'react';
 import { BlueCircleParticle, OrangeCircleParticle, PurpleCircleParticle, StarParticle } from '../Particles';
 import { FaWindows, FaLinux, FaAppStore, FaAndroid } from 'react-icons/fa';
 import { ButtonPrimary, DropdownButton } from '../atoms';
