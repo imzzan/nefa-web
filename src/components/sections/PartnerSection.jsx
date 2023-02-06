@@ -1,6 +1,10 @@
 import React from "react";
-import { Fade } from "react-reveal";
 import { Partner1, Partner2, Partner3, Partner4 } from "../../images";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
+
 
 const PartnerSection = () => {
   return (
@@ -17,18 +21,18 @@ const PartnerSection = () => {
           </div>
           <div className="mx-4">
             <div className=" grid grid-cols-2 md:grid-cols-4 gap-6">
-                <Fade up>
-                    <img src={Partner1} className='basis-1/2'/>
-                </Fade>
-                <Fade up delay={200}>
+                <div data-aos="fade-up" data-aos-once="true" data-aos-offset="300">
+                    <img src={Partner1} className='basis-1/2' />
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" data-aos-once="true" data-aos-offset="300">
                     <img src={Partner2} className='basis-1/2'/>
-                </Fade>
-                <Fade up delay={400}>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="400" data-aos-once="true" data-aos-offset="300">
                     <img src={Partner3} className='basis-1/2'/>
-                </Fade>
-                <Fade up delay={600}>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="600" data-aos-once="true" data-aos-offset="300">
                     <img src={Partner4} className='basis-1/2'/>
-                </Fade>
+                </div>
             </div>
           </div>
         </div>

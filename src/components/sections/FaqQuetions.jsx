@@ -1,5 +1,4 @@
 import React from "react";
-import { Fade } from "react-reveal";
 import { Faq } from "../../images";
 import { FaqItems } from "../moleculs";
 
@@ -11,9 +10,9 @@ const FaqQuetions = () => {
          md:grid-cols-2"
       >
         <div className="mb-4">
-          <Fade up duration={1000}>
+          <div data-aos="fade-up" data-aos-offset="150">
             <img src={Faq} alt="FAQ" />
-          </Fade>
+          </div>
         </div>
         <div className=" flex justify-center">
           <div className="">

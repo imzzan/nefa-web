@@ -1,18 +1,20 @@
 import React from "react";
-import { Fade } from "react-reveal";
 import { Buy, Btc, Usd } from "../../images";
 import { ButtonPrimary } from "../atoms";
 import { Select } from "../moleculs";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const BuyandTradeSection = () => {
-
   const formHandler = (e) => {
-    e.preventDefault()
-  }
+    e.preventDefault();
+  };
 
   const inputChangeHandler = (e) => {
     console.log(e.target.value);
-  }
+  };
 
   return (
     <div className=" container mx-auto py-10 md:py-28" id="buy">
@@ -32,9 +34,14 @@ const BuyandTradeSection = () => {
                   <div className="border-r border-primary pr-4 md:pr-6">
                     <small className="text-primary">Amount</small>
                   </div>
-                  <input type="text" value="5,000" onChange={inputChangeHandler} className='text-center outline-none w-full'/>
+                  <input
+                    type="text"
+                    value="5,000"
+                    onChange={inputChangeHandler}
+                    className="text-center outline-none w-full"
+                  />
                 </div>
-                <Select value="USB" icon={Usd} name='USD'/>
+                <Select value="USB" icon={Usd} name="USD" />
               </div>
 
               <div className="flex justify-between gap-4 md:gap-6 mb-6">
@@ -42,19 +49,23 @@ const BuyandTradeSection = () => {
                   <div className="border-r border-primary pr-4 md:pr-6">
                     <small className="text-primary">Amount</small>
                   </div>
-                  <input type="text" value="0.10901" onChange={inputChangeHandler} className='text-right outline-none w-full' />
+                  <input
+                    type="text"
+                    value="0.10901"
+                    onChange={inputChangeHandler}
+                    className="text-right outline-none w-full"
+                  />
                 </div>
-                <Select value="BTC" icon={Btc} name='BTC'/>
+                <Select value="BTC" icon={Btc} name="BTC" />
               </div>
-              <ButtonPrimary className="w-full">
-              Buy Now
-            </ButtonPrimary>
+              <ButtonPrimary className="w-full">Buy Now</ButtonPrimary>
             </form>
           </div>
-        </div>   <div className='row-start-1 md:col-start-2'>
-          <Fade up>
-            <img src={Buy} alt=""/>
-          </Fade>
+        </div>{" "}
+        <div className="row-start-1 md:col-start-2">
+          <div data-aos="fade-up" data-aos-offset="300">
+            <img src={Buy} alt="" />
+          </div>
         </div>
       </div>
     </div>

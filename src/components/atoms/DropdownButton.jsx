@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { BsChevronDown } from 'react-icons/bs';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import ClickOutComponent from 'react-onclickout';
 import ButtonSecondary from './ButtonSecondary';
 
 
@@ -12,7 +11,7 @@ const DropdownButton = ({ className, name, children }) => {
 
   return (
     <div className=' relative'>
-        <ClickOutComponent onClickOut={() => isOpen && setIsOpen(false)}>
+        <div onClickOut={() => isOpen && setIsOpen(false)}>
             <ButtonSecondary className={className} onClick={() => setIsOpen(!isOpen)}>
                 {name}
                 <BsChevronDown className="inline ml-2" />
@@ -24,7 +23,7 @@ const DropdownButton = ({ className, name, children }) => {
           })}>
           {children}
         </div>
-        </ClickOutComponent>
+        </div>
     </div>
   )
 }

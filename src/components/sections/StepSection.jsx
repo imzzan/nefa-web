@@ -1,7 +1,9 @@
 import React from "react";
-import { Fade } from "react-reveal";
 import { Arrow, Okey, SignUp, Wallet } from "../../images";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init();
 const StepSection = () => {
   return (
     <section className="px-6">
@@ -14,7 +16,7 @@ const StepSection = () => {
             Get started in just a few minutes
           </h2>
           <div className="md:flex justify-center gap-20">
-            <Fade up>
+            <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200">
               <div className=" text-center relative px-4">
                 <div className=" relative">
                   <img
@@ -34,8 +36,8 @@ const StepSection = () => {
                   or send it on easily to friends
                 </p>
               </div>
-            </Fade>
-            <Fade up delay={500}>
+            </div>
+            <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200" data-aos-delay="200">
               <div className="text-center relative px-4">
                 <div className='relative'>
                   <img src={Wallet} className="mb-4 mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300" alt="" />
@@ -46,8 +48,8 @@ const StepSection = () => {
                   Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet
                 </p>
               </div>
-            </Fade>
-            <Fade up delay={1000}>
+            </div>
+            <div data-aos="fade-up" data-aos-once="true" data-aos-offset="200" data-aos-delay="400">
               <div className="text-center relative px-4">
                 <img src={Okey} className="mb-4 mx-auto hover:-translate-y-6 hover:scale-105 transition-all duration-300" alt="" />
                 <h3 className="text-2xl font-bold mb-4">Buy Crypto</h3>
@@ -55,7 +57,7 @@ const StepSection = () => {
                   Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your profile
                 </p>
               </div>
-            </Fade>
+            </div>
           </div>
         </div>
       </div>

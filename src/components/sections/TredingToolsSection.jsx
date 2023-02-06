@@ -1,7 +1,10 @@
 import React from 'react';
-import { Fade } from 'react-reveal';
 import { TradingTools } from '../../images';
-import { ButtonSecondary } from '../atoms'
+import { ButtonSecondary } from '../atoms';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const TredingToolsSection = () => {
   return (
@@ -35,9 +38,9 @@ const TredingToolsSection = () => {
             </a>
           </div>
           <div className="row-start-1 mb-8">
-            <Fade up>
+            <div data-aos="fade-up" data-aos-offset="400">
               <img src={TradingTools} alt="" />
-            </Fade>
+            </div>
           </div>
         </div>
       </div>

@@ -1,16 +1,19 @@
 import React from 'react';
 import { Banks } from '../../images';
-import { Fade } from 'react-reveal';
 import { BsCheckCircleFill } from 'react-icons/bs';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const SecuritySection = () => {
   return (
     <section className=' container mx-auto py-10 md:py-24'>
               <div className="grid md:grid-cols-2">
         <div>
-          <Fade up>
+          <div data-aos="fade-up" data-aos-offset="400">
             <img src={Banks} alt="" />
-          </Fade>
+          </div>
         </div>
         <div className="flex justify-center">
           <div className="max-w-xl">
